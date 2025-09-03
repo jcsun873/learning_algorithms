@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Interschimbarea valorilor a două variabile</title>
+<style>
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+h1 {
+  background-color: grey;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+body {
+  background-color: #E5E4E2;color:black;
+}
+</style>
+</head>
+<body>
+<div style="background-color: #FAF9F6;color:black;padding:20px;">
+<h1>Interschimbarea valorilor a două variabile</h1>
+<h2>Vom alege două variabile <i>a</i> și <i>b</i> pe care le vom interschimba, și o variabilă numită <i>aux</i> pe care o vom folosi pentru a stoca una din cele două variabile.<br>
+Lui <i>a</i> îi vom da valoarea 2, lui <i>b</i> îi vom da valoarea 4 și lui <i>aux</i> îi vom da valoarea 0. În variabila <i>aux</i> vom stoca valoarea lui <i>a</i> (adică 2) iar in <i>a</i> care
+acum este 2 vom stoca valoarea lui <i>b</i> care este 4. În variabila <i>b</i> vom stoca valoarea lui <i>aux</i> care este 2 și astfel prin metoda celor trei pahare am reușit
+să interschimbăm valorile celor două variabile.<br>
+În final vom afișa valorile schimbate ale lui <i>a</i> si <i>b</i>.
+ 
+</h2>
+
+<div style="background-color:black;color:grey;padding:20px;">
+<h3>
+<pre>
+    $aux = 0;
+    $a = 2;
+    $b = 4;
+    $aux = $a;
+    $a = $b;
+    $b = $aux;
+
+    echo "a este: ",$a," si b este: " ,$b;
+</pre>
+</h3>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Inversul unui număr întreg</title>
+<style>
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+h1 {
+  background-color: grey;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+body {
+  background-color: #E5E4E2;color:black;
+}
+</style>
+</head>
+<body>
+<div style="background-color: #FAF9F6;color:black;padding:20px;">
+<h1>Inversul unui număr întreg</h1>
+<h2>Vom alege un număr ca și 789 și vom inițializa o variabilă numită <i>b</i> cu 0. Cu ajutorul buclei <i>while</i> vom verifica dacă numărul <i>nr</i> este diferit de 0 (în cazul 
+în care numărul nostru ar fi 70 inversul ar fi 7). Dacă condiția este împlinită, variabila <i>b</i> va stoca <i>b</i> înmulțit cu 10, care va fi adunat la ultima cifră curentă.<br>
+După prima ieșire din buclă, variabila <i>b</i> va conține valoarea 9 deoarece din înmulțirea <i>b * 10</i> rezultă 0.<br>
+După a doua ieșire din buclă variabila <i>b</i> va conține valoarea 98 deoarece valoarea lui <i>b</i> care acum este 9 va fi înmulțită cu 10, rezultând 90 și va fi adăugată ultima 
+cifră care este 8.<br>
+După a treia ieșire din buclă variabila <i>b</i> va conține valoarea 987 deoarece valoarea lui <i>b</i> care acum este 98 va fi înmulțită cu 10, rezultând 980 și va fi adăugată 
+ultima cifră curentă care este 7.<br>
+Înainte de ieșirea din bucla <i>while</i> vom tăia ultima cifră a lui <i>nr</i> iar la ieșirea din buclă vom afișa inversul numărului.</h2>
+<div style="background-color:black;color:white;padding:20px;">
+<h3>
+<pre>
+     $nr = 789;
+     $b = 0;     
+     while($nr != 0){
+
+       $b = $b * 10 + $nr % 10;
+       $nr = floor($nr / 10);
+     }
+    echo "Inversul numărului este: ",$b;
+</pre>
+</h3>
+</div>
+</body>
+</html>

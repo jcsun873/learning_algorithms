@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Produsul cifrelor unui număr întreg</title>
+<style>
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+h1 {
+  background-color: grey;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+body {
+  background-color: #E5E4E2;color:black;
+}
+</style>
+</head>
+<body>
+<div style="background-color: #FAF9F6;color:black;padding:20px;">
+<h1>Produsul cifrelor unui număr întreg</h1>
+<h2>Alegem numărul 236 și inițializăm două variabile:<br>
+<ul>
+<li>O variabilă numită <i>produsul</i> o vom inițializa cu 1 pentru a putea înmulți cu ultima cifră</li>
+<li>O variabilă numită <i>ultima_cifra</i> o vom inițializa cu 0 pentru a putea stoca în aceasta ultima cifră a numărului</li>
+</ul>
+Vom folosi <i>while</i> pentru a opri intrarea în buclă în momentul în care numărul ajunge la 0. La intrarea în bucla <i>while</i> vom păstra ultima cifră a numărului în variabila
+corespunzătoare iar variabila <i>produsul</i> va conține <i>produsul</i> care acum este 1 înmulțit cu ultima cifră curentă.<br>
+Produsul final care acum este 6 va fi înmulțit la următoarea intrare în buclă cu ultima cifră care va fi 3 și tot așa până când condiția nu va mai fi îndeplinită.<br>
+Înainte de ieșirea din buclă vom tăia ultima cifră a numărului <i>nr</i> prin operația <i>nr / 10</i> iar rezultatul va fi noul <i>nr</i> care va fi verificat la intrarea în <i>while</i>.
+</h2>
+<div style="background-color:black;color:white;padding:20px;">
+<h3>
+<pre>
+     $nr = 236;
+     $produsul = 1;
+     $ultima_cifra = 0;
+     
+     while($nr > 0){
+         
+       $ultima_cifra = $nr % 10;
+       $produsul = $produsul * $ultima_cifra;
+       $nr = floor ($nr / 10);
+     }
+    
+    echo "Produsul este: " .$produsul;
+</pre>
+</h3>
+</div>
+</body>
+</html>

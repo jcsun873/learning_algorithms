@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Testul de număr prim</title>
+<style>
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+h1 {
+  background-color: grey;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+body {
+  background-color: #E5E4E2;color:black;
+}
+</style>
+</head>
+<body>
+<div style="background-color: #FAF9F6;color:black;padding:20px;">
+<h1>Testul de număr prim</h1>
+<h2>Un număr prim este un număr natural, mai mare decât 1, care are exact doi divizori pozitivi: numărul 1 și numărul în sine.</h2>
+<h2>Alegem un număr întreg <i>nr = 11</i> și inițializăm o variabilă numită <i>numar_Divizori</i> cu 0 pentru a putea numerota câți divizori are numărul ales.<br>
+Ne vom folosi de <i>for</i> pentru a parcurge toate cifrele de la 1 până la valoarea numărului nostru.<br>
+Ca să putem verifica câți divizori are <i>nr</i> ne vom folosi de <i>if</i> pentru a stabili condiția ca restul împărțirii numărului la divizorul <i>d</i> curent să fie 0.<br>
+Dacă rezultatul în urma acestei operații este 0 atunci <i>numar_Divizori</i> va fi incrementat.<br>
+La ieșirea din <i>for</i> vom utiliza încă un <i>if</i> pentru a verifica dacă numărul de divizori este egal cu 2.<br>
+Dacă condiția este adevărată atunci vom afișa mesajul <i>"Numărul este prim"</i> iar in caz contrar vom afișa <i>"Numărul nu este prim"</i>.
+</h2>
+<div style="background-color:black;color:white;padding:20px;">
+<h3>
+<pre>
+           $nr = 11;
+	   $numar_Divizori = 0;
+	   
+	   for($d = 1; $d <= $nr; $d++){
+	       
+	       if($nr % $d == 0){
+	           $numar_Divizori++;
+	       }
+	   }
+	   if($numar_Divizori == 2){
+	       
+	      echo "Numărul ",$nr, " este prim: ";
+	   }else{
+
+	      echo "Numărul ",$nr, " nu este prim: ";
+	   }   
+</pre>
+</h3>
+</div>
+
+</body>
+</html>

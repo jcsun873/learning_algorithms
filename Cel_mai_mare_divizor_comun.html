@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cel mai mare divizor comun</title>
+<style>
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+h1 {
+  background-color: grey;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+body {
+  background-color: #E5E4E2;color:black;
+}
+</style>
+</head>
+<body>
+<div style="background-color: #FAF9F6;color:black;padding:20px;">
+<h1>Cel mai mare divizor comun</h1>
+<h2>Vom alege numerele 20 și 12 și le vom stoca în variabilele <i>a</i> și <i>b</i>.<br>
+Cu ajutorul buclei <i>while</i> verificăm dacă <i>a</i> și <i>b</i> au valori diferite și dacă condiția este îndeplinită vom compara într-un <i>if</i> dacă <i>a</i> 
+este mai mare decât <i>b</i>.
+Dacă este adevărat, <i>a</i> primește valoarea lui a-b iar în caz contrar <i>b</i> va primi valoarea lui b-a.<br>
+La prima intrare în buclă <i>a</i> fiind mai mare va primi valoarea 8(20-12), la a doua intrare în buclă <i>b</i> fiind mai mare va primi valoarea 4(12-8) iar la a treia intrare 
+în buclă <i>a</i> fiind mai mare va primi valoarea 4(8-4).<br>
+Se va ieși din <i>while</i> cu cele două variabile <i>a</i> și <i>b</i> având valorile 4 și 4 (condiția din buclă nu mai este îndeplinită) și se va afișa oricare din cele două variabile 
+(fiind egale nu contează care din cele două se va afișa).
+</h2>
+<div style="background-color:black;color:white;padding:20px;">
+<h3>
+<pre>
+            $a = 20;
+	    $b = 12;
+
+	   while($a != $b){
+
+	     if($a > $b){
+	         $a = $a - $b;
+	     }else{
+	         $b = $b - $a;
+	     } 
+	   }
+	   echo "Cel mai mare divizor comun este: " , $a;
+</pre>
+</h3>
+</div>
+</body>
+</html>

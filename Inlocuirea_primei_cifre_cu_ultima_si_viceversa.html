@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Înlocuirea primei cifre cu ultima și viceversa</title>
+<style>
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+h1 {
+  background-color: grey;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+body {
+  background-color: #E5E4E2;color:black;
+}
+</style>
+</head>
+<body>
+<div style="background-color: #FAF9F6;color:black;padding:20px;">
+<h1>Înlocuirea primei cifre cu ultima și viceversa</h1>
+<h2>Vom alege numărul 7711 și îl vom stoca într-o variabilă numită <i>nr</i> și mai inițializăm încă o variabilă numită <i>ultima_cifra</i> pentru a reține ultima cifră a 
+numărului <i>nr</i>.<br>
+Ne vom folosi de o variabilă <i>a</i> pentru a stoca valoarea din variabila <i>nr</i> pentru a o folosi mai târziu și vom mai utiliza o variabilă <i>b</i> pe care 
+o inițializăm cu 1.<br>
+Prin condiția <i>nr > 9</i> din bucla <i>while</i> ne vom opri când ajungem la ultima cifră a numărului <i>nr</i>.<br>
+La prima intrare în buclă vom stoca în <i>b</i> valoarea lui <i>b</i>(care acum este 1) înmulțită cu 10 și vom tăia ultima cifră a numărului <i>nr</i> înainte de a ieși din buclă. 
+La a doua intrare în buclă variabila <i>b</i> va avea valoarea 100 iar la a treia intrare în buclă va avea valoarea 1000.<br>
+Pe măsură ce tăiem ultima cifră a numărului la fiecare intrare în buclă ajungem la valoarea 7 care oprește intrarea în  <i>while</i>.<br>
+Ultima cifră cu valoarea 1 va fi înmulțită cu valoarea lui <i>b</i> care este 1000 și valoarea totală(1000) va fi adunată cu 711(deoarece <i>a % b</i> taie prima cifră din numărul 7711).<br>
+Rezultatul parantezei, 1711 se împarte la 10(va fi 171) și se înmulțește cu 10.<br>
+Noul rezultat 1710 se adună cu <i>nr</i> care are valoarea 7 deoarece nu a mai intrat în buclă neîndeplinit condiția necesară.<br>
+Valoarea finală a variabilei <i>a</i> (1717) va fi afișată în consolă.
+</h2>
+<div style="background-color:black;color:white;padding:20px;">
+<h3>
+<pre>
+           $nr = 7711;
+	   $ultima_cifra = $nr % 10;
+	   $a = $nr;
+	   $b = 1;
+	   
+	   while($nr > 9){
+	       
+	       $b = $b * 10;
+	       $nr = floor($nr / 10);
+	   }
+	   $a = floor((($ultima_cifra * $b + $a % $b) / 10)) * 10 + $nr;
+	   echo "Numarul format prin inlocuirea primei cifre cu ultima si viceversa este: ",$a;
+</pre>
+</h3>
+</div>
+</body>
+</html>

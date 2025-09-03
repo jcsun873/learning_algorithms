@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Eliminarea primei cifre a unui număr întreg</title>
+<style>
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+h1 {
+  background-color: grey;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+body {
+  background-color: #E5E4E2;color:black;
+}
+</style>
+</head>
+<body>
+<div style="background-color: #FAF9F6;color:black;padding:20px;">
+<h1>Eliminarea primei cifre a unui număr întreg</h1>
+<h2>Vom alege numărul 980 ca și valoare pentru variabila <i>nr</i> și apoi vom inițializa o variabilă numită <i>a</i> cu valoarea variabilei <i>nr</i>.<br>
+Variabila <i>prima_cifra</i> va avea valoarea 1 pentru a putea înmulți mai departe cu o altă valoare iar condiția din bucla <i>while</i> va fi <i>a > 9</i> 
+pentru a ne opri în momentul în care ajungem la ultima cifră a variabilei <i>a</i>.<br>
+La prima ieșire din buclă variabila <i>prima_cifra</i> va avea valoarea 10 iar la a doua ieșire va avea valoarea 100 deoarece produsul anterior 10 va fi înmulțit cu 10 încă o dată.<br>
+Înainte de fiecare ieșire din buclă vom realiza operația <i>a / 10</i> pentru a tăia ultima cifră și pentru a atribui numărul nou variabilei <i>a</i>.
+Atunci când variabila <i>a</i> va avea valoarea 9 vom ieși din <i>while</i> și numărul <i>nr</i> cu valoarea 980 va prelua valoarea 80 deoarece operatorul % îi va 
+atribui lui <i>nr</i> doar ultimele două cifre.<br>
+La final vom afișa valoarea lui <i>nr</i> obținută în urma operației anterioare.
+</h2>
+<div style="background-color:black;color:white;padding:20px;">
+<h3>
+<pre>
+     $nr = 980;
+     $a = $nr;
+     $prima_cifra = 1;
+     
+     while($a > 9){
+         
+       $prima_cifra = $prima_cifra * 10;
+       $a = floor($a / 10);
+     }
+     $nr = $nr % $prima_cifra;
+     
+    echo "Numarul nou fără prima cifră este: ",$nr;
+</pre>
+</h3>
+</div>
+</body>
+</html>

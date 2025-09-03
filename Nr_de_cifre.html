@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Numărul de cifre ale unui număr întreg</title>
+<style>
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+h1 {
+  background-color: grey;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+body {
+  background-color: #E5E4E2;color:black;
+}
+</style>
+</head>
+<body>
+<div style="background-color: #FAF9F6;color:black;padding:20px;">
+<h1>Numărul de cifre ale unui număr întreg</h1>
+<h2>Alegem un număr de tip întreg cum ar fi 1234 și îl împărțim în mod repetat la 10:<br>
+1234 : 10 = 123 (câtul) și 4 (restul)<br>
+123 : 10 = 12 (câtul) și 3 (restul)<br>
+12 : 10 = 1 (câtul) și 2 (restul)<br>
+1 : 10 = 0 (câtul) și 1 (restul)<br>
+Observăm că putem împărți numărul de patru ori, iar numărul are patru cifre.<br>
+Vom folosi bucla <i>while</i> pentru a opri operația de împărțire a numărului în momentul în care acesta ajunge la 0. Cu ajutorul unei variabile pe care o denumim <i>cifre</i> și 
+o inițializăm cu 0 vom numerota de câte ori se intră în bucla <i>while</i>. Vom împărți numărul la 10 până când <i>nr</i> va avea câtul 0 și restul va conține ultima cifră.
+</h2>
+<div style="background-color:black;color:white;padding:20px;">
+<h3>
+<pre>
+           $nr = 1234;
+	   $cifre = 0;
+	   
+	   while($nr > 0){
+	       
+	        $nr = floor($nr / 10);
+	        $cifre++;
+	    }
+	   echo "Numărul de cifre este: ",$cifre;
+</pre>
+</h3>
+</div>
+</body>
+</html>

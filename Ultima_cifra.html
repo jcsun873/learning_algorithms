@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ultima cifră a unui număr întreg</title>
+<style>
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+h1 {
+  background-color: grey;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+body {
+  background-color: #E5E4E2;color:black;
+}
+</style>
+</head>
+<body>
+<div style="background-color: #FAF9F6;color:black;padding:20px;">
+<h1>Ultima cifră a unui număr întreg</h1>
+<h2>Alegem un număr de tip întreg cum ar fi 123 și vedem ce se întâmplă în momentul împărțirii acestuia la 10:<br>
+123 : 10 = 12 (câtul) și 3 (restul)<br>
+Putem observa următoarele:<br>
+<ul>
+<li>Restul împărțirii (în cazul nostru 3) este egal cu ultima cifră a numărului 123</li>
+<li>Câtul împărțirii (în cazul nostru 12) este egal cu numărul inițial 123, dar având ultima cifră tăiată</li>
+</ul>
+Acum să facem această operație sub formă de cod.<br>
+Vom realiza operația <i>n % 10</i> pentru a obține ultima cifră din număr și vom afișa valoarea variabilei <i>cifra</i>.
+</h2>
+<div style="background-color:black;color:white;padding:20px;">
+<h3>
+<pre>
+            $nr = 123;
+	    $cifra = $nr % 10;
+		echo "Ultima cifra a numărului este: ",$cifra;
+</pre>
+</h3>
+</div>
+</body>
+</html>

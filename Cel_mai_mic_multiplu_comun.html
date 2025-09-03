@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cel mai mic multiplu comun</title>
+<style>
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+h1 {
+  background-color: grey;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+body {
+  background-color: #E5E4E2;color:black;
+}
+</style>
+</head>
+<body>
+<div style="background-color: #FAF9F6;color:black;padding:20px;">
+<h1>Cel mai mic multiplu comun</h1>
+<h2>Vom alege numerele 8 și 20 și le vom stoca în variabilele <i>a</i> și <i>b</i>.<br>
+Ne vom folosi de o variabilă <i>x</i> să stocăm <i>a</i> și de o variabilă <i>y</i> să stocăm <i>b</i> pentru a găsi cel mai mare divizor comun.<br>
+Cu ajutorul buclei <i>while</i> verificăm dacă <i>x</i> și <i>y</i> au valori diferite și dacă condiția este îndeplinită vom compara într-un <i>if</i> dacă <i>x</i> 
+este mai mare decât <i>y</i>.
+Dacă este adevărat, <i>x</i> primește valoarea lui x-y iar în caz contrar <i>y</i> va primi valoarea lui y-x.<br>
+La prima intrare în buclă <i>y</i> fiind mai mare va primi valoarea 12(20-8), la a doua intrare în buclă <i>y</i> fiind mai mare va primi valoarea 4(12-8) iar la a 
+treia intrare în buclă <i>x</i> fiind mai mare va primi valoarea 4(8-4).<br>
+Se va ieși din <i>while</i> cu cele două variabile <i>x</i> și <i>y</i> având valorile 4 și 4 (condiția din buclă nu mai este îndeplinită).<br>
+Vom folosi o variabilă numită <i>cmmmc</i> pentru a înmulți a cu b (8x20) și a împărții rezultatul la <i>x</i>.<br>
+Rezultatul <i>cmmmc</i> = 40 va fi afișat la final în consolă.
+</h2>
+<div style="background-color:black;color:white;padding:20px;">
+<h3>
+<pre>
+           $a = 8;
+	   $b = 20;
+	   $x = $a;
+	   $y = $b;
+
+	   while($x != $y){
+
+	     if($x > $y){
+	         $x = $x - $y;
+	     }else{
+	         $y = $y - $x;
+	     }  
+	   }
+	   $cmmmc = ($a * $b) / $x;
+
+	   echo "Cel mai mic multiplu comun este: ",$cmmmc;
+</pre>
+</h3>
+</div>
+</body>
+</html>

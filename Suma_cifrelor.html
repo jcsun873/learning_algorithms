@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Suma cifrelor unui număr întreg</title>
+<style>
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+h1 {
+  background-color: grey;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+body {
+  background-color: #E5E4E2;color:black;
+}
+</style>
+</head>
+<body>
+<div style="background-color: #FAF9F6;color:black;padding:20px;">
+<h1>Suma cifrelor unui număr întreg</h1>
+<h2>
+Alegem un număr de tip întreg cum ar fi 8732 și vom folosi operatorul % pentru a scoate ultima cifră din număr. Cu ajutorul buclei <i>while</i> vom pune condiția
+ca numărul să fie mai mare ca 0 pentru a putea parcurge toate cifrele numărului.<br>
+Vom inițializa două variabile:<br>
+<ul>
+<li>O variabilă numită <i>ultima_cifră</i> pentru a stoca ultima cifră a numărului la fiecare intrare în buclă (vom inițializa cu 0).</li>
+<li>O variabilă numită <i>suma</i> pentru a aduna începând cu 0 fiecare cifră de fiecare dată când intrăm în buclă.</li>
+</ul>
+Înainte de a ieși din buclă vom împărți numărul la 10 pentru a tăia ultima cifră, iar la ieșirea din buclă vom afișa suma cumulată.
+</h2>
+<div style="background-color:black;color:white;padding:20px;">
+<h3>
+<pre>
+            $nr = 8732;
+	    $ultima_cifra = 0;
+	    $suma = 0;
+	    
+	    while($nr > 0){
+	        
+	        $ultima_cifra = $nr % 10;
+	        $suma = $suma + $ultima_cifra;
+	        $nr = floor($nr / 10);
+	    }
+		echo "Suma cifrelor este: ",$suma;
+</pre>
+</h3>
+</div>
+</body>
+</html>

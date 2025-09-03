@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Testul de număr palindrom</title>
+<style>
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+h1 {
+  background-color: grey;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+body {
+  background-color: #E5E4E2;color:black;
+}
+</style>
+</head>
+<body>
+<div style="background-color: #FAF9F6;color:black;padding:20px;">
+<h1>Testul de număr palindrom</h1>
+<h2>Alegem numărul 2332 pentru a verifica dacă este palindrom(de la stânga la dreapta și de la dreapta la stânga se citește la fel) și îl stocăm în variabila  
+numită <i>nr_initial</i>.<br>
+O variabilă <i>nr</i> va prelua valoarea lui <i>nr_initial</i> și i se va tăia câte o cifră de fiecare dată când intră în bucla <i>while</i>.<br>
+Ne vom folosi de o variabilă <i>a</i> pe care o inițializăm cu 0 pentru a aduna <i>a * 10</i> cu ultima cifră a numărului.<br>
+La prima intrare în buclă, <i>a</i> va avea valoarea 2(deoarece 0 * 10 = 0 și 0 + 2 = 2), la a doua intrare în buclă <i>a</i> va avea valoarea 23(deoarece 2 * 10 = 20 și 20 + 3 = 23), 
+la a treia intrare în buclă <i>a</i> va avea valoarea 233 (deoarece 23 * 10 = 230 și 230 + 3 = 233) iar la ultima intrare în buclă <i>a</i> va avea valoarea 2332(deoarece 233 * 10 
+= 2330 și 2330 + 2 = 2332).<br>
+La ieșirea din buclă comparăm în <i>if</i> valoarea lui <i>a</i> cu valoarea lui <i>nr_initial</i>, iar dacă sunt egale vom afișa mesajul <i>"Numărul este palindrom"</i>(în caz contrar vom afișa 
+mesajul <i>"Numărul nu este palindrom"</i>). 
+</h2>
+<div style="background-color:black;color:white;padding:20px;">
+<h3>
+<pre>
+            $nr_initial = 2332;
+	    $nr = $nr_initial;
+	    $a = 0;
+	    while($nr != 0){
+	        
+	        $a = $a * 10 + $nr % 10;
+	        $nr = floor($nr / 10);
+	    }
+	    
+	    if($a == $nr_initial){
+	        
+	        echo "Numărul este palindrom";
+	    }else{
+	        
+	        echo "Numărul nu este palindrom";
+	    }
+</pre>
+</h3>
+</div>
+</body>
+</html>

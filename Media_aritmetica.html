@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Media aritmetică a cifrelor unui număr întreg</title>
+<style>
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+h1 {
+  background-color: grey;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+body {
+  background-color: #E5E4E2;color:black;
+}
+</style>
+</head>
+<body>
+<div style="background-color: #FAF9F6;color:black;padding:20px;">
+<h1>Media aritmetică a cifrelor unui număr întreg</h1>
+<h2>Vom alege un număr <i>nr</i> cu valoarea 53698 și inițializăm 3 variabile:
+<ul>
+<li>O variabilă <i>ultima_cifra</i> cu 0 pentru a stoca ultima cifră a numărului <i>nr</i></li>
+<li>O variabilă <i>nr_cifre</i> pentru a numerota câte cifre are numărul <i>nr</i></li>
+<li>O variabilă <i>suma</i> pentru a aduna începând cu 0 toate cifrele numărului <i>nr</i></li>
+</ul>
+Vom folosi <i>while</i> pentru a opri intrarea în buclă la terminarea cifrelor numărului <i>nr</i>.<br>
+În blocul de instrucțiuni stocăm ultima cifră și apoi o adunăm la suma existentă în variabila <i>suma</i>.<br>
+Cu ajutorul variabilei <i>nr_cifre</i> numerotăm de câte ori se intră în buclă și apoi efectuăm operația <i>n/10</i> pentru a tăia ultima cifră(rezultatul fiind stocat în <i>nr</i>).<br>
+La ieșirea din <i>while</i> vom utiliza variabila numită <i>media_aritmetica</i> pentru a afișa suma adunată în buclă împărțită la numărul de cifre conținute de variabila <i>nr</i>(adică 
+valoarea lui <i>nr_cifre</i>).
+</h2>
+<div style="background-color:black;color:white;padding:20px;">
+<h3>
+<pre>
+           $nr = 53698;
+	   $ultima_cifra = 0;
+	   $nr_cifre = 0;
+	   $suma = 0;
+	   
+	   while($nr > 0){
+	       
+	       $ultima_cifra = $nr % 10;
+	       $suma = $suma + $ultima_cifra;
+	       $nr_cifre++;
+	       $nr = floor($nr / 10);
+	   }
+	   $media_aritmetica = $suma / $nr_cifre;
+	   echo "Media aritmetică este: ",$media_aritmetica;
+</pre>
+</h3>
+</div>
+</body>
+</html>

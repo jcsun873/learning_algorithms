@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cea mai mare cifră a unui număr întreg</title>
+<style>
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+
+ h1 {
+  background-color: grey;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+ }
+
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+body {
+  background-color: #E5E4E2;color:black;
+}
+
+</style>
+</head>
+<body>
+<div style="background-color: #FAF9F6;color:black;padding:20px;">
+<h1>Cea mai mare cifră a unui număr întreg</h1>
+<h2>Alegem un număr de tip întreg cum ar fi 9698 și vom inițializa cu 0 o variabilă numită <i>cea_mai_mare_cifra</i>.<br>
+Vom tăia în mod repetat ultima cifră a lui <i>nr</i>, stocând-o într-o variabilă numită <i>ultima_cifra</i> pentru a putea fi comparată cu cea mai mare cifră curentă.
+Dacă variabila care conține ultima cifră este mai mare, atunci <i>cea_mai_mare_cifră</i> va prelua valoarea acelei cifre. Astfel vom compara toate cifrele numărului
+între ele păstrând mereu cea mai mare cifră în variabila respectivă.
+
+</h2>
+<div style="background-color:black;color:white;padding:20px;">
+<h3>
+<pre>
+
+            $nr = 9698;
+	    $cea_mai_mare_cifra = 0;
+	    $ultima_cifra = 0;
+
+	    while($nr > 0){
+
+	        $ultima_cifra = $nr % 10;
+	        if($cea_mai_mare_cifra < $ultima_cifra){
+	            $cea_mai_mare_cifra = $ultima_cifra;
+	        }
+	        $nr = $nr / 10;
+	    }
+		
+        echo "Cea mai mare cifră este: ", $cea_mai_mare_cifra;
+
+</pre>
+</h3>
+</div>
+</body>
+</html>

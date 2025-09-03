@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Eliminarea cifrelor pare(sau impare) dintr-un număr</title>
+<style>
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+h1 {
+  background-color: grey;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+body {
+  background-color: #E5E4E2;color:black;
+}
+</style>
+</head>
+<body>
+<div style="background-color: #FAF9F6;color:black;padding:20px;">
+<h1>Eliminarea cifrelor pare(sau impare) dintr-un număr</h1>
+<h2>Vom alege numărul 6529 și îl vom stoca în variabila <i>nr</i> iar mai departe inițializăm încă două variabile:<br>
+<ul>
+<li>O variabilă <i>ultima_cifra</i> cu 0 pentru a reține ultima cifră</li>
+<li>O variabilă <i>nr_nou</i> cu 0 pentru a forma un număr nou fără cifre pare</li><br>
+</ul>
+În bucla <i>while</i> vom pune condiția ca numărul <i>nr</i> să fie mai mare decât 0 și în blocul de instrucțiuni ne vom folosi de un <i>if</i> pentru a aduna în 
+<i>nr_nou</i> valoarea lui <i>nr_nou</i>(care acum este 0) * 10 cu ultima cifră a numărului <i>nr</i>.<br>
+Înainte de a ieși din <i>while</i> vom tăia ultima cifră a numărului.<br>
+Atunci când condiția <i>nr > 0</i> nu va mai fi îndeplinită vom inițializa o variabilă <i>a</i> cu 0 și vom pune într-un alt <i>while</i> ca și condiție ca 
+numărul <i>nr_nou</i>(care acum este 95) să fie diferit de 0.<br>
+În buclă, <i>a</i> va lua valoarea lui <i>a * 10</i> adunată cu ultima cifră a lui <i>nr_nou</i>.<br>
+Într-o altă instrucțiune, variabila <i>nr_nou</i> se va împărți la 10 pentru a scăpa de ultima cifră iar numărul nou va fi verificat în <i>while</i>.<br>
+La prima intrare în buclă, <i>a</i> va avea valoarea 5 iar la a doua intrare în buclă va avea valoarea 59(5 * 10 + 9).<br>
+La final vom afișa valoarea lui <i>a</i> care conține de fapt numărul inițial 6529 dar fără cifre pare.<br>
+Pentru eliminarea cifrelor impare vom pune în <i>if</i> condiția: <i>ultima_cifra % 2 == 0</i>. 
+</h2>
+<div style="background-color:black;color:white;padding:20px;">
+<h3>
+<pre>
+            $nr = 6529;
+	    $ultima_cifra = 0;
+	    $nr_nou = 0;
+
+	    while($nr > 0){
+
+	        $ultima_cifra = $nr % 10;
+	        if($ultima_cifra % 2 != 0){
+	           $nr_nou = $nr_nou * 10 + $ultima_cifra; 
+	        }
+	        $nr = floor($nr / 10);
+	    }
+	    $a = 0;
+	    while($nr_nou != 0){
+
+	        $a = ($a * 10) + ($nr_nou % 10);
+	        $nr_nou = floor($nr_nou / 10);
+	    }
+	    
+		echo "Numarul fara cifre pare este: ", $a;
+</pre>
+</h3>
+</div>
+</body>
+</html>

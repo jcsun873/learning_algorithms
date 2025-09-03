@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Produsul cifrelor pare(sau impare) ale unui număr întreg</title>
+<style>
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+h1 {
+  background-color: grey;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+body {
+  background-color: #E5E4E2;color:black;
+}
+</style>
+</head>
+<body>
+<div style="background-color: #FAF9F6;color:black;padding:20px;">
+<h1>Produsul cifrelor pare(sau impare) ale unui număr întreg</h1>
+<h2>Alegem numărul 873 și inițializăm două variabile:<br>
+<ul>
+<li>O variabilă numită <i>produsul</i> o vom inițializa cu 1 pentru a putea înmulți cu ultima cifră.</li>
+<li>O variabilă numită <i>ultima_cifra</i> o vom inițializa cu 0 pentru a putea stoca în aceasta ultima cifră a numărului</li>
+</ul>
+Vom folosi <i>while</i> pentru a opri intrarea în buclă în momentul în care numărul ajunge la 0. La intrarea în bucla <i>while</i> vom realiza operația <i>nr % 10</i> pentru a stoca
+ultima cifră, apoi verificăm cu ajutorul lui <i>if</i> dacă condiția este adevărată (vom verifica dacă rezultatul operației este 0, adică verificăm dacă cifra este pară )prin
+ folosirea operatorului % .<br>
+Dacă condiția este adevărată vom parcurge instrucțiunea din bloc care înmulțește variabila <i>produsul</i> (prima oară are valoarea 1) cu ultima cifră curentă și apoi stochează rezultatul
+ în variabila <i>produsul</i> pentru a continua înmulțirea cu următoarea cifră.<br>
+La ieșirea din <i>if</i> vom tăia ultima cifră a numărului <i>nr</i> prin operația <i>nr / 10</i> iar rezultatul va fi noul <i>nr</i> care va fi verificat la intrarea în bucla <i>while</i>.<br>
+Pentru produsul cifrelor impare vom pune condiția <i>if (ultima_cifra % 2 != 0)</i>.
+</h2>
+<div style="background-color:black;color:white;padding:20px;">
+<h3>
+<pre>
+     $nr=878;
+     $produsul=1;
+     $ultima_cifra=0;
+     
+     while ($nr>0){ 
+         
+       $ultima_cifra = $nr % 10;
+       if($ultima_cifra % 2 == 0){ 
+           
+       $produsul = $produsul * $ultima_cifra;
+       }
+       $nr = floor($nr / 10);
+       }
+
+    echo "Produsul cifrelor pare este: ",$produsul;
+</pre>
+</h3>
+</div>
+</body>
+</html>

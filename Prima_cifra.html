@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Prima cifră a unui număr întreg</title>
+<style>
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+h1 {
+  background-color: grey;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+body {
+  background-color: #E5E4E2;color:black;
+}
+</style>
+</head>
+<body>
+<div style="background-color: #FAF9F6;color:black;padding:20px;">
+<h1>Prima cifră a unui număr întreg</h1>
+<h2>Alegem un număr de tip întreg cum ar fi 1234 și îl împărțim în mod repetat la 10:<br>
+1234 : 10 = 123 (câtul) și 4 (restul)<br>
+123 : 10 = 12 (câtul) și 3 (restul)<br>
+12 : 10 = 1 (câtul) și 2 (restul)<br>
+Acum trebuie să automatizăm acest proces pentru a reduce numărul liniilor de cod necesare pentru această operație. În acest caz vom folosi bucla <i>while</i> și vom pune condiția
+ca numărul nostru să parcurgă instrucțiunea din bloc, atâta timp cât el este alcătuit din minim două cifre (<i>nr > 9</i>).<br>
+În blocul de instrucțiuni vom pune <i>nr = nr / 10</i> pentru a reduce treptat numărul de cifre aflate în numărul nostru.<br>
+Atunci când numărul rămâne doar cu o singură cifră se iese din blocul de instrucțiuni și se afișează acest număr (adică prima cifră a numărului inițial).
+
+</h2>
+<div style="background-color:black;color:white;padding:20px;">
+<h3>
+<pre>
+            $nr = 1234;
+	    while($nr > 9){
+	        
+	        $nr = floor($nr / 10);
+	    }   
+	    
+		echo "Prima cifra este: ",$nr;
+</pre>
+</h3>
+</div>
+</body>
+</html>
